@@ -19,3 +19,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('users', \App\Http\Controllers\User\UserController::class);
+
+Route::prefix('auth')->group(function () {
+    Route::post('login',[\App\Http\Controllers\Auth\AuthController::class,'login']);
+    Route::get('login',[\App\Http\Controllers\Auth\AuthController::class,'login']);
+
+    Route::post('register',[\App\Http\Controllers\Auth\AuthController::class,'register']);
+    Route::get('register',[\App\Http\Controllers\Auth\AuthController::class,'register']);
+});
