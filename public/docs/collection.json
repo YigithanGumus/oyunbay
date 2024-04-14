@@ -1,0 +1,251 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "null"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "f2e85300-fde3-4f4b-ba8a-4a974671a0f3",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "User API",
+            "description": "",
+            "item": [
+                {
+                    "name": "User List All",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Kullan\u0131c\u0131 listesini \u00e7ekmektedir.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"name\":\"Yi\\u011fithan G\\u00fcm\\u00fc\\u015f\",\"email\":\"yigithangumus@gmail.com\",\"email_verified_at\":null,\"created_at\":\"2024-04-01T21:46:10.000000Z\",\"updated_at\":\"2024-04-01T21:46:10.000000Z\",\"username\":\"yigithan\"},{\"id\":2,\"name\":\"Yi\\u011fithan G\\u00fcm\\u00fc\\u015f\",\"email\":\"yigithangumus2@gmail.com\",\"email_verified_at\":null,\"created_at\":\"2024-04-01T21:46:11.000000Z\",\"updated_at\":\"2024-04-01T21:46:11.000000Z\",\"username\":\"yigithan2\"},{\"id\":3,\"name\":\"Yi\\u011fithan G\\u00fcm\\u00fc\\u015f\",\"email\":\"yigithangumus3@gmail.com\",\"email_verified_at\":null,\"created_at\":\"2024-04-01T21:46:11.000000Z\",\"updated_at\":\"2024-04-01T21:46:11.000000Z\",\"username\":\"yigithan3\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "User Create",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"deleniti\",\"email\":\"dach.richard@example.org\",\"password\":\">v={?{;?*Jm>XgeOqw5\"}"
+                        },
+                        "description": "Kullan\u0131c\u0131 kay\u0131t k\u0131sm\u0131d\u0131r.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User List Show",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Kullan\u0131c\u0131 bilgilerini \u00e7ekmektedir.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"name\":\"Yi\\u011fithan G\\u00fcm\\u00fc\\u015f\",\"email\":\"yigithangumus@gmail.com\",\"email_verified_at\":null,\"created_at\":\"2024-04-01T21:46:10.000000Z\",\"updated_at\":\"2024-04-01T21:46:10.000000Z\",\"username\":\"yigithan\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "User Update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Kullan\u0131c\u0131 bilgilerini g\u00fcncellemektedir.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User Delete",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Kullan\u0131c\u0131y\u0131 silmektedir.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

@@ -1,0 +1,161 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'null'
+paths:
+  /api/users:
+    get:
+      summary: 'User List All'
+      operationId: userListAll
+      description: 'Kullanıcı listesini çekmektedir.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    name: 'Yiğithan Gümüş'
+                    email: yigithangumus@gmail.com
+                    email_verified_at: null
+                    created_at: '2024-04-01T21:46:10.000000Z'
+                    updated_at: '2024-04-01T21:46:10.000000Z'
+                    username: yigithan
+                  -
+                    id: 2
+                    name: 'Yiğithan Gümüş'
+                    email: yigithangumus2@gmail.com
+                    email_verified_at: null
+                    created_at: '2024-04-01T21:46:11.000000Z'
+                    updated_at: '2024-04-01T21:46:11.000000Z'
+                    username: yigithan2
+                  -
+                    id: 3
+                    name: 'Yiğithan Gümüş'
+                    email: yigithangumus3@gmail.com
+                    email_verified_at: null
+                    created_at: '2024-04-01T21:46:11.000000Z'
+                    updated_at: '2024-04-01T21:46:11.000000Z'
+                    username: yigithan3
+      tags:
+        - 'User API'
+      security: []
+    post:
+      summary: 'User Create'
+      operationId: userCreate
+      description: 'Kullanıcı kayıt kısmıdır.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User API'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: deleniti
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: dach.richard@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: '>v={?{;?*Jm>XgeOqw5'
+              required:
+                - name
+                - email
+                - password
+      security: []
+  '/api/users/{id}':
+    get:
+      summary: 'User List Show'
+      operationId: userListShow
+      description: 'Kullanıcı bilgilerini çekmektedir.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  name: 'Yiğithan Gümüş'
+                  email: yigithangumus@gmail.com
+                  email_verified_at: null
+                  created_at: '2024-04-01T21:46:10.000000Z'
+                  updated_at: '2024-04-01T21:46:10.000000Z'
+                  username: yigithan
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: 'Yiğithan Gümüş'
+                  email:
+                    type: string
+                    example: yigithangumus@gmail.com
+                  email_verified_at:
+                    type: string
+                    example: null
+                  created_at:
+                    type: string
+                    example: '2024-04-01T21:46:10.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-04-01T21:46:10.000000Z'
+                  username:
+                    type: string
+                    example: yigithan
+      tags:
+        - 'User API'
+      security: []
+    put:
+      summary: 'User Update'
+      operationId: userUpdate
+      description: 'Kullanıcı bilgilerini güncellemektedir.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User API'
+      security: []
+    delete:
+      summary: 'User Delete'
+      operationId: userDelete
+      description: 'Kullanıcıyı silmektedir.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User API'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: 'User API'
+    description: ''
